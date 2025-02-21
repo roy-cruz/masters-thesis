@@ -2,4 +2,34 @@
 
 The Standard Model of particle physics has been phenomenally succesful in describing all observed fundamental particles and their interactions. Its predictive power has been repeatedly demonstrated, such as in 2012 with the discovery of the Higgs boson at the Large Hadron Collider (LHC) at CERN \cite{collaborationObservationNewBoson2012}, as well as with the discovery of the top quark at the Tevatron in 1955 \cite{abachiObservationTopQuark1995}. Despite its success, there exists an abundance of signs that the Standard Model is an incomplete theory. Among these, we have the matter-antimatter asymmetry in the universe \cite{}, the existence of dark matter, the neutrino's non-zero mass, the lightness of the Higgs boson \cite{saikumarExploringFrontiersChallenges2024}, and the inability to describe gravity within this framework \cite{}.
 
-Of particular interest in this work is the elusive dark matter. Evidence for this type of matter, which does not interact with baryonic matter through any of the known forces except the gravitaional force, is abundant. Among this evidence, we have the cosmic microwave background anisotropies, graviational lensing, and the rotation curves of galaxies \cite{}. From these pieces of evidence, we have come to the conclusion that the majority of the matter in the universe is non-baryonic and not described by the Standard Model. In fact, the total energy density of all baryonic matter in the universe, $\Gamma_{\text{B}} \sim 0.05$, is much smaller than the total matter energy density in the universe, i.e. $\Gamma_{m} \sim 0.32$ \cite{}. This means that the majority of the matter in the universe, that which constitutes $\Gamma_{\text{DM}} \sim 0.27$, is non-baryonic and not described by the Standard Model.
+Of particular interest in this work is the elusive dark matter. Evidence for this type of matter, which does not interact with baryonic matter through any of the known forces except the gravitaional force, is abundant. Among this evidence, we have the cosmic microwave background anisotropies, graviational lensing, and the rotation curves of galaxies \cite{}. From these pieces of evidence, we have come to the conclusion that the majority of the matter in the universe is non-baryonic and not described by the Standard Model. In fact, the total energy density of all baryonic matter in the universe, $\Omega_{\text{B}} \sim 0.05$, is much smaller than the total matter energy density in the universe, i.e. $\Omega_{m} \sim 0.32$ \cite{}. This means that the majority of the matter in the universe, that which constitutes $\Omega_{\text{DM}} \sim 0.27$, is non-baryonic and not described by the Standard Model.
+
+The simultaneous success and jarring incompleteness of the Standard Model demands a more complete theory of particle physics. Many such theories have been proposed among which we have supersymmetry, extra dimensions, and dark sector models. Of particular interes in this work is the case of a strongly coupled hidden/dark sector which extends the SM with a new non-Abelian guage group. When the dark sector confines bellow a confinment scale $\Lambda_{\text{d}}$, it is possible for dark hadrons to form, some of which might be stable and thus serve as dark matter candidates. This dark sector is assumed to be secluded from the SM, interacting with it only through a mediator particle.
+
+In this work we focus on the case where the confinment scale of the dark sector falls well below the center of mass energy of the LHC, i.e. $\Lambda_{\text{D}} \ll \sqrt{s}$. In such a case, dark quarks would be produced in the LHC, shortly before hadronizing into dark hadrons. Some fraction of these dark hadrons would be stable and thus serve as dark matter candidates. Others, however, would decay back into SM particles. The phenomenology of such a models is rich and so many of the searches taking place at the LHC focus on the exotic signatures predicted, without neccesity for a strong theory prior. Among the many of these types of signatures a dark sector might produce, we have emerging jets.
+
+Emerging jets (EMJs) are a type of signature that arises when a dark jet is produced in the LHC following the production of dark quarks. Some of the particles in these invisible jets might escape our detector. However, unstable dark mesons could travel some potentially macroscopic distance before decaying back into SM particles, producing a detectible particle shower. Given that the process of these dark mesons decaying into SM particles is a stochastic process, the location of the decay is distributed, meaning that the energy from this jet emerges into our detector, resulting in a wide jet with a displaced vertex.
+
+At the LHC, there have been searches for EMJs only in the CMS experiment. The most recent dedicated search for EMJs \cite{cmscollaborationSearchNewPhysics2024} was performed in 2024 and focused on the production of EMJs in the tracker volume of the detector. It considered a pair of dark sector models, both with a bi-fundamental scalar mediator $X_{\text{dark}}$ connecting the dark sector to the SM. The first of these models had a simple flavor structure where the only the down quark is non-negiably to the dark quarks. This model results in a dark pion average decay length of:
+
+\begin{equation}
+	\begin{aligned}
+		c\tau_{\pi_{\text{dark}}} = 80 \text{ mm} \left(\frac{1}{\kappa^4}\right) \left(\frac{2 \text{ GeV}}{f_{\pi_{\text{dark}}}}\right)^2 \left(\frac{100 \text{ MeV}}{m_d}\right)^2 \left(\frac{2 \text{ GeV}}{m_{\pi_{\text{dark}}}}\right)  \left(\frac{m_{X_{\text{dark}}}}{1 \text{ TeV}}\right)^2
+	\end{aligned}
+\end{equation}
+
+where $\kappa$ is the Yukawa coupling between the dark quarks and the mediator, $f_{\pi_{\text{dark}}}$ is the dark pion decay constant, $m_d$ is the dark quark mass, $m_{\pi_{\text{dark}}}$ is the dark pion mass, and $m_{X_{\text{dark}}}$ is the mediator mass.
+
+In addition to the aformetioned model, the search considered a model with multiple Yukawa couplings $\kappa_{\alpha i}$ that have non-negligible values such that the dark pions decay at an average distance of:
+
+\begin{equation}
+	\begin{aligned}
+		c\tau_{\pi_{\text{dark}}}^{\alpha\beta} = \frac{
+		8\pi m_{X_{\text{dark}}}^4
+		}{
+		N_c m_{\pi_{\text{dark}}}f^2_{\pi_{\text{dark}}} \sum_{ij}|\kappa_{\alpha i}\kappa_{\beta j}^{*}|^2 (m_i^2 + m_j^2) \sqrt{\left(1 - \frac{(m_i + m_j)^2}{m_{\pi_{\text{dark}}}^2}\right)\left(1-\frac{(m_i - m_j)^2}{m_{\pi_{\text{dark}}}^2}\right)}
+		}
+	\end{aligned}
+\end{equation}
+
+where $N_c$ is the number of colors of the dark sector and $\kappa_{\alpha i}$ are the Yukawa couplings (where $\alpha$ and $\beta$ are the dark quark flavors and $i$ and $j$ are the SM quark flavors). A simplifying focus of the search was that the couplings were flavor-aligned, meaning that the three dark quark flavors couple to the corresponding SM quark flavors. Thus, $\kappa_{\alpha i} = \kappa_{0}\delta_{\alpha i}$.
