@@ -2,8 +2,6 @@
 
 \section{The Standard Model}
 
-% \section{Hidden Valley Models and Dark Showers}
-
 \section{Emerging Jets}
 
 In this work, we consider an $SU(N_d)$ gauge group which extends the standard model gauge group to
@@ -15,3 +13,73 @@ In this work, we consider an $SU(N_d)$ gauge group which extends the standard mo
 \end{equation}
 
 where $N_d$ is the number of colors of the new gauge group, and $\mathcal{G}_{\text{SM}}$ is the standard model gauge symmetry. We assume there are $n_f$ Dirac fermions, singlets under $G_{\text{SM}}$, in the fundamental representation of this extension. We call these fermions dark quarks, and denote them as $Q_d$. This dark sector has a confinment scale of $\Lambda_d$, with a value approximating the dark mesons and baryons. The dark baryons have a conserved charge, the dark baryon number.
+
+\section{Previous EMJ searches}
+
+At the LHC, there have been searches for EMJs only in the CMS experiment. The most recent dedicated search for EMJs \cite{cmscollaborationSearchNewPhysics2024} was performed in 2024 and focused on the production of EMJs in the tracker volume of the detector. It considered a pair of dark sector models, both with a bi-fundamental scalar mediator $X_{\text{dark}}$ connecting the dark sector to the SM, as shown in Figure \ref{fig:tchan_feyn}. The dark quarks hadronize in the dark sector, producing dark jets. Unstable dark mesons travel a macroscopic distance before decaying back into the SM. The first of these models had a simple flavor structure where the only the down quark is non-negiably to the dark quarks. This model results in a dark pion average decay length of:
+
+
+\begin{figure}[h]
+    \centering
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \feynmandiagram [horizontal=a to b] {
+            i1 -- [gluon] a -- [gluon] i2,
+            a -- [gluon] b,
+
+            % i1 -- [fermion] a -- [fermion] i2,
+            % a -- [photon] b
+            % g1 [particle=\( g \)] -- [gluon] a,
+            % g2 [particle=\( g \)] -- [gluon] a,
+            % a -- [scalar]
+            % a -- [scalar, edge label=\(X_{\text{dark}}\)] b,
+            % a -- [scalar, edge label'=\(X_{\text{dark}}^\dagger\)] c,
+            % b -- [fermion] q1 [particle=\( Q_{\text{dark}} \)],
+            % b -- [anti fermion] q2 [particle=\( \bar{q} \)],
+            % c -- [fermion] q3 [particle=\( q' \)],
+            % c -- [fermion] q4 [particle=\( Q'_{\text{dark}} \)]
+        };
+        \caption{Gluon-gluon fusion}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \feynmandiagram [horizontal=a to b] {
+            q1 [particle=\( q \)] -- [fermion] a,
+            q2 [particle=\( \bar{q} \)] -- [anti fermion] a,
+            a -- [gluon, edge label=\( g \)] b,
+            a -- [gluon, edge label'=\( g \)] c,
+            b -- [scalar, edge label=\(X_{\text{dark}}\)] q3 [particle=\( Q_{\text{dark}} \)],
+            b -- [anti fermion] q4 [particle=\( \bar{q} \)],
+            c -- [scalar, edge label'=\(X_{\text{dark}}^\dagger\)] q5 [particle=\( q' \)],
+            c -- [fermion] q6 [particle=\( Q'_{\text{dark}} \)]
+        };
+        \caption{Quark-antiquark annihilation}
+    \end{subfigure}
+    \caption{Feynman diagrams for pair production of dark mediator particles via gluon-gluon fusion (left) and quark-antiquark annihilation (right), with each mediator decaying to an SM quark and a dark quark.}
+    \label{fig:feynman_diagrams}
+\end{figure}
+
+\begin{equation}
+	\begin{aligned}
+		c\tau_{\pi_{\text{dark}}} = 80 \text{ mm} \left(\frac{1}{\kappa^4}\right) \left(\frac{2 \text{ GeV}}{f_{\pi_{\text{dark}}}}\right)^2 \left(\frac{100 \text{ MeV}}{m_d}\right)^2 \left(\frac{2 \text{ GeV}}{m_{\pi_{\text{dark}}}}\right)  \left(\frac{m_{X_{\text{dark}}}}{1 \text{ TeV}}\right)^2
+	\end{aligned}
+\end{equation}
+
+\noindent where $\kappa$ is the Yukawa coupling between the dark quarks and the mediator, $f_{\pi_{\text{dark}}}$ is the dark pion decay constant, $m_d$ is the dark quark mass, $m_{\pi_{\text{dark}}}$ is the dark pion mass, and $m_{X_{\text{dark}}}$ is the mediator mass.
+
+In addition to the aformetioned model, the search considered a model with multiple Yukawa couplings $\kappa_{\alpha i}$ that have non-negligible values such that the dark pions decay at an average distance of:
+
+\begin{equation}
+	\begin{aligned}
+		c\tau_{\pi_{\text{dark}}}^{\alpha\beta} = \frac{
+		8\pi m_{X_{\text{dark}}}^4
+		}{
+		N_c m_{\pi_{\text{dark}}}f^2_{\pi_{\text{dark}}} \sum_{ij}|\kappa_{\alpha i}\kappa_{\beta j}^{*}|^2 (m_i^2 + m_j^2) \sqrt{\left(1 - \frac{(m_i + m_j)^2}{m_{\pi_{\text{dark}}}^2}\right)\left(1-\frac{(m_i - m_j)^2}{m_{\pi_{\text{dark}}}^2}\right)}
+		}
+	\end{aligned}
+\end{equation}
+
+where $N_c$ is the number of colors of the dark sector and $\kappa_{\alpha i}$ are the Yukawa couplings (where $\alpha$ and $\beta$ are the dark quark flavors and $i$ and $j$ are the SM quark flavors). A simplifying focus of the search was that the couplings were flavor-aligned, meaning that the three dark quark flavors couple to the corresponding SM quark flavors and thus, $\kappa_{\alpha i} = \kappa_{0}\delta_{\alpha i}$.
+
+% The search for
