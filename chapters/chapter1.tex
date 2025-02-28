@@ -20,7 +20,7 @@ At the LHC, there have been searches for EMJs only in the CMS experiment. The mo
 
 where $\kappa$ is the Yukawa coupling between the dark quarks and the mediator, $f_{\pi_{\text{dark}}}$ is the dark pion decay constant, $m_d$ is the dark quark mass, $m_{\pi_{\text{dark}}}$ is the dark pion mass, and $m_{X_{\text{dark}}}$ is the mediator mass.
 
-In addition to the aformetioned model, the search considered a model with multiple Yukawa couplings $\kappa_{\alpha i}$ that have non-negligible values such that the dark pions decay at an average distance of:
+In addition to the discussed model, the search considered a model with multiple Yukawa couplings $\kappa_{\alpha i}$ that have non-negligible values such that the dark pions decay at an average distance of:
 
 \begin{equation}
 	\begin{aligned}
@@ -33,3 +33,9 @@ In addition to the aformetioned model, the search considered a model with multip
 \end{equation}
 
 where $N_c$ is the number of colors of the dark sector and $\kappa_{\alpha i}$ are the Yukawa couplings (where $\alpha$ and $\beta$ are the dark quark flavors and $i$ and $j$ are the SM quark flavors). A simplifying focus of the search was that the couplings were flavor-aligned, meaning that the three dark quark flavors couple to the corresponding SM quark flavors. Thus, $\kappa_{\alpha i} = \kappa_{0}\delta_{\alpha i}$.
+
+\feynmandiagram [horizontal=a to b] {
+  i1 -- [fermion] a -- [fermion] i2,
+  a -- [photon] b,
+  f1 -- [fermion] b -- [fermion] f2,
+};
