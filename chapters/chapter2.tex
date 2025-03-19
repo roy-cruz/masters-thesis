@@ -1,10 +1,52 @@
 \chapter{The Standard Model and Beyond}
-
 \section{The Standard Model}
+
+The Standard Model (SM) of particle physics is our current best framework describing the the fundamental constituents of the universe, as well as the three out of the 4 known fundamental forces of nature, namely the weak, strong and electromagnetic forces. Each particle can have three types of charge, each deliniating what force they are suceptible to. These charges are the color electric (electromagnetic force), color (strong force) and weak (weak force) charges.
+
+The particles in the SM are divided into four categories: the twelve fermions with spin-$\frac12$, of which there are twelve, the four vector or guage bosons which have spin-$1$ and which are the force carriers, and a single scalar boson with spin-$0$, the Higgs boson, which is responsible for adjuticating mass to the rest of the fundamental particles through their interactions with its field. The first of this class of particles, the fermions, constitute the building blocks of matter, and they can be divided into quarks and leptons. These particles can carry three types of charges, namely color, electric and weak isospin. Whether or not a particle carries any of these fundamental charges determines what types of force it is capable of experiencing. A particle with color, electric and isospin can experience the strong, electromagnetic and weak force, respectively. All of the fermions carry weak isospin, but not all of them have the other two types of charge. Table \ref{SM_particles} shows the fermions, their charges, as well as their masses and lifetimes.
+
+% In the SM, each force is described by a quantum field theory (QFT) in which the force is manifested through the exchange of a spin-$1$ gauge boson. For the strong force, the gauge boson is the massless gluon. For the electromagnetic force, the force carrying particle is the photon. Finally, the charged weak interactions are mediated by the $W^+$, $W^-$, and $Z$ bosons.
+
+% The force carrying spin-$1$ guage bosons of the SM are all described by a quantum field theory (QFT). For the electromagnetic force, the force carrier is the photon, which is described
+
+
+
+% Table \ref{SM_particles} summarizes the these particles
+
+\begin{table}[h] % TODO: Properly format table
+	\centering
+	\renewcommand{\arraystretch}{1.3}
+	\setlength{\tabcolsep}{10pt}
+	\begin{tabular}{l l c c | l l c c}
+		\multicolumn{8}{c}{\textbf{Table 1.1} The twelve fundamental fermions divided into quarks and leptons.}                                                \\
+		\multicolumn{8}{c}{The masses of the quarks are the current masses.}                                                                                   \\
+		\toprule
+		\multicolumn{4}{c}{\textbf{Leptons}} & \multicolumn{4}{c}{\textbf{Quarks}}                                                                             \\
+		\midrule
+		\textbf{}                            & \textbf{Particle}                   & $Q$  & \textbf{mass/GeV} & \textbf{Particle} & $Q$    & \textbf{mass/GeV} \\
+		\midrule
+		First generation                     & electron ($e^-$)                    & $-1$ & 0.0005            & down ($d$)        & $-1/3$ & 0.003             \\
+		                                     & neutrino ($\nu_e$)                  & 0    & $<10^{-9}$        & up ($u$)          & $+2/3$ & 0.005             \\
+		\midrule
+		Second generation                    & muon ($\mu^-$)                      & $-1$ & 0.106             & strange ($s$)     & $-1/3$ & 0.1               \\
+		                                     & neutrino ($\nu_\mu$)                & 0    & $<10^{-9}$        & charm ($c$)       & $+2/3$ & 1.3               \\
+		\midrule
+		Third generation                     & tau ($\tau^-$)                      & $-1$ & 1.78              & bottom ($b$)      & $-1/3$ & 4.5               \\
+		                                     & neutrino ($\nu_\tau$)               & 0    & $<10^{-9}$        & top ($t$)         & $+2/3$ & 174               \\
+		\bottomrule
+	\end{tabular}
+	\label{SM_particles}
+\end{table}
+
 
 \section{Emerging Jets}
 
-In this work, we consider an $SU(N_d)$ gauge group which extends the standard model gauge group to
+% Proper introduction to EMJ models in general, and then in particular the models we're workign with (t-channel, s-channel)
+%
+
+Despite the astounding predictive power of the SM, the wealth of astronomical and cosmological evidence of the existence of dark matter points to this framework's incompleteness and the existence of physics beyond it. Experimental searches have excluded many dark matter models with weakly interacting massive particles. As a result, alternate models have emerged with a hidden guage sector with strong self-interactions in this hidden dark sector.
+
+In this work, we consider a class of models first proposed in \cite{schwallerEmergingJets2015}, which extends the Standard Model by including a confining dark sector of particles which are charged under a new gauge group with a non-abelian guage symmetry, extending the SM to:
 
 \begin{equation}
 	\begin{aligned}
@@ -12,52 +54,70 @@ In this work, we consider an $SU(N_d)$ gauge group which extends the standard mo
 	\end{aligned}
 \end{equation}
 
-where $N_d$ is the number of colors of the new gauge group, and $\mathcal{G}_{\text{SM}}$ is the standard model gauge symmetry. We assume there are $n_f$ Dirac fermions, singlets under $G_{\text{SM}}$, in the fundamental representation of this extension. We call these fermions dark quarks, and denote them as $Q_d$. This dark sector has a confinment scale of $\Lambda_d$, with a value approximating the dark mesons and baryons. The dark baryons have a conserved charge, the dark baryon number.
+This dark sector is composed of $n_f$ dark quarks, $Q_d$, which are Dirac fermions, and are singlets under the SM gauge group, but charged under the new $SU(N_d)$ gauge group with $N_d \geq 2$ dark colors. Given that this new sector is confined with a confinment scale $\Lambda_d$, the dark quarks would hadronize into dark mesons and baryons, which are bound state of the dark quarks. The dark baryons would carry a conserved charge, namely the dark baryons number, which means that the lightest dark baryons, the equivalent of the dark proton, would be stable and thus serve as the dark matter candidate put forward by this model. Dark mesons, on the other hand, would not carry such a charge, and would be unstable, capable of decaying back into SM particles.
 
-\section{Previous EMJ searches}
+We consider two possible scenarios for the mediator between the dark sector and the SM. Firstly, we consider a bi-fundamental scalar mediator $X_{\text{dark}}$, charged under $SU(N_d)$ and QCD. The decay of such a mediator would produce a quark, dark quark pair. The SM quarks would hadronize and produce a jet in the SM, and the dark quark would produce a dark jet. The dark jet would be composed of dark baryons, the lightest of which, the dark sector equivalent of the proton, would be stable and thus serve as the dark matter candidate put forward by this model, and dark mesons. The dark mesons, on the other hand, if kinematically allowed, would decay to the model's lightest composite state, i.e. the dark pion. This meson would itself be unstable and, assuming a large energy hierarchy between the mediator mass and the confinment scale of the dark sector, i.e. $m_{\pi_{\text{DK}}} \gg \Lambda_d$, could potentially travel macroscopic distances before decaying back into SM particles. Becasue the decay of these unstable dark mesons is a stochastic process, they would happen at different positions in the detector, and thus the energy of the dark jet would emerge into the detector. This would then be seen in the detector as a wide jet with displaced vertices. We call these types of objects emerging jets (EMJs). In this work, we focus on the pair production of this bi-fundamental mediator through gluon-gluon fusion or quark-antiquark annihilation. The Feynman diagrams for these processes can be seen in Figure \ref{fig:tchan}.
 
-At the LHC, there have been searches for EMJs only in the CMS experiment. The most recent dedicated search for EMJs \cite{cmscollaborationSearchNewPhysics2024} was performed in 2024 and focused on the production of EMJs in the tracker volume of the detector. It considered a pair of dark sector models, both with a bi-fundamental scalar mediator $X_{\text{dark}}$ connecting the dark sector to the SM, as shown in Figure \ref{fig:tchan_feyn}. The dark quarks hadronize in the dark sector, producing dark jets. Unstable dark mesons travel a macroscopic distance before decaying back into the SM. The first of these models had a simple flavor structure where the only the down quark is non-negiably to the dark quarks. This model results in a dark pion average decay length of:
+Another type of model considered in this work is one where the mediator is a neutral vector boson $Z_{\text{dark}}$. This mediator couples to quark pairs and dark quark pairs.
 
 
-\begin{figure}[h]
-    \centering
-    \begin{subfigure}{0.45\textwidth}
-        \centering
-        \feynmandiagram [horizontal=a to b] {
-            i1 -- [gluon] a -- [gluon] i2,
-            a -- [gluon] b,
 
-            % i1 -- [fermion] a -- [fermion] i2,
-            % a -- [photon] b
-            % g1 [particle=\( g \)] -- [gluon] a,
-            % g2 [particle=\( g \)] -- [gluon] a,
-            % a -- [scalar]
-            % a -- [scalar, edge label=\(X_{\text{dark}}\)] b,
-            % a -- [scalar, edge label'=\(X_{\text{dark}}^\dagger\)] c,
-            % b -- [fermion] q1 [particle=\( Q_{\text{dark}} \)],
-            % b -- [anti fermion] q2 [particle=\( \bar{q} \)],
-            % c -- [fermion] q3 [particle=\( q' \)],
-            % c -- [fermion] q4 [particle=\( Q'_{\text{dark}} \)]
-        };
-        \caption{Gluon-gluon fusion}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}{0.45\textwidth}
-        \centering
-        \feynmandiagram [horizontal=a to b] {
-            q1 [particle=\( q \)] -- [fermion] a,
-            q2 [particle=\( \bar{q} \)] -- [anti fermion] a,
-            a -- [gluon, edge label=\( g \)] b,
-            a -- [gluon, edge label'=\( g \)] c,
-            b -- [scalar, edge label=\(X_{\text{dark}}\)] q3 [particle=\( Q_{\text{dark}} \)],
-            b -- [anti fermion] q4 [particle=\( \bar{q} \)],
-            c -- [scalar, edge label'=\(X_{\text{dark}}^\dagger\)] q5 [particle=\( q' \)],
-            c -- [fermion] q6 [particle=\( Q'_{\text{dark}} \)]
-        };
-        \caption{Quark-antiquark annihilation}
-    \end{subfigure}
-    \caption{Feynman diagrams for pair production of dark mediator particles via gluon-gluon fusion (left) and quark-antiquark annihilation (right), with each mediator decaying to an SM quark and a dark quark.}
-    \label{fig:feynman_diagrams}
+% In this work, we consider an $SU(N_d)$ gauge group which extends the standard model gauge group to
+
+% \begin{equation}
+% 	\begin{aligned}
+% 		G_{\text{SM}} \times SU(N_d).
+% 	\end{aligned}
+% \end{equation}
+
+% where $N_d$ is the number of colors of the new gauge group, and $\mathcal{G}_{\text{SM}}$ is the standard model gauge symmetry. We assume there are $n_f$ Dirac fermions, singlets under $G_{\text{SM}}$, in the fundamental representation of this extension. We call these fermions dark quarks, and denote them as $Q_d$. This dark sector has a confinment scale of $\Lambda_d$, with a value approximating the dark mesons and baryons. The dark baryons have a conserved charge, the dark baryon number.
+
+% \section{Previous EMJ searches}
+
+
+It considered a pair of dark sector models, both with a bi-fundamental scalar mediator $X_{\text{dark}}$ connecting the dark sector to the SM, as shown in Figure \ref{fig:tchan_feyn}. The dark quarks hadronize in the dark sector, producing dark jets. Unstable dark mesons travel a macroscopic distance before decaying back into the SM. The first of these models had a simple flavor structure where the only the down quark is non-negiably to the dark quarks. This model results in a dark pion average decay length of:
+
+
+\begin{figure}[h] % TODO
+	\centering
+	\begin{subfigure}{0.45\textwidth}
+		\centering
+		\feynmandiagram [horizontal=a to b] {
+		i1 -- [gluon] a -- [gluon] i2,
+		a -- [gluon] b,
+
+
+		% i1 -- [fermion] a -- [fermion] i2,
+		% a -- [photon] b
+		% g1 [particle=\( g \)] -- [gluon] a,
+		% g2 [particle=\( g \)] -- [gluon] a,
+		% a -- [scalar]
+		% a -- [scalar, edge label=\(X_{\text{dark}}\)] b,
+		% a -- [scalar, edge label'=\(X_{\text{dark}}^\dagger\)] c,
+		% b -- [fermion] q1 [particle=\( Q_{\text{dark}} \)],
+		% b -- [anti fermion] q2 [particle=\( \bar{q} \)],
+		% c -- [fermion] q3 [particle=\( q' \)],
+		% c -- [fermion] q4 [particle=\( Q'_{\text{dark}} \)]
+		};
+		\caption{Gluon-gluon fusion}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}{0.45\textwidth}
+		\centering
+		\feynmandiagram [horizontal=a to b] {
+		q1 [particle=\( q \)] -- [fermion] a,
+		q2 [particle=\( \bar{q} \)] -- [anti fermion] a,
+		a -- [gluon, edge label=\( g \)] b,
+		a -- [gluon, edge label'=\( g \)] c,
+		b -- [scalar, edge label=\(X_{\text{dark}}\)] q3 [particle=\( Q_{\text{dark}} \)],
+		b -- [anti fermion] q4 [particle=\( \bar{q} \)],
+		c -- [scalar, edge label'=\(X_{\text{dark}}^\dagger\)] q5 [particle=\( q' \)],
+		c -- [fermion] q6 [particle=\( Q'_{\text{dark}} \)]
+		};
+		\caption{Quark-antiquark annihilation}
+	\end{subfigure}
+	\caption{Feynman diagrams for pair production of dark mediator particles via gluon-gluon fusion (left) and quark-antiquark annihilation (right), with each mediator decaying to an SM quark and a dark quark.}
+	\label{fig:feynman_diagrams}
 \end{figure}
 
 \begin{equation}
