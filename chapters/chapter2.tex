@@ -1,6 +1,11 @@
 \chapter{The Standard Model and Beyond}
 \section{The Standard Model}
 
+% SM as best theory framework
+% Composition of SM
+% 
+
+
 The Standard Model (SM) of particle physics is our current best framework describing the the fundamental constituents of the universe, as well as the three out of the 4 known fundamental forces of nature, namely the weak, strong and electromagnetic forces. Each particle can have three types of charge, each deliniating what force they are suceptible to. These charges are the color electric (electromagnetic force), color (strong force) and weak (weak force) charges.
 
 The particles in the SM are divided into four categories: the twelve fermions with spin-$\frac12$, of which there are twelve, the four vector or guage bosons which have spin-$1$ and which are the force carriers, and a single scalar boson with spin-$0$, the Higgs boson, which is responsible for adjuticating mass to the rest of the fundamental particles through their interactions with its field. The first of this class of particles, the fermions, constitute the building blocks of matter, and they can be divided into quarks and leptons. These particles can carry three types of charges, namely color, electric and weak isospin. Whether or not a particle carries any of these fundamental charges determines what types of force it is capable of experiencing. A particle with color, electric and isospin can experience the strong, electromagnetic and weak force, respectively. All of the fermions carry weak isospin, but not all of them have the other two types of charge. Table \ref{SM_particles} shows the fermions, their charges, as well as their masses and lifetimes.
@@ -15,7 +20,6 @@ The particles in the SM are divided into four categories: the twelve fermions wi
 
 \begin{table}[h] % TODO: Properly format table
 	\centering
-	\renewcommand{\arraystretch}{1.3}
 	\setlength{\tabcolsep}{10pt}
 	\begin{tabular}{l l c c | l l c c}
 		\multicolumn{8}{c}{\textbf{Table 1.1} The twelve fundamental fermions divided into quarks and leptons.}                                                \\
@@ -44,7 +48,7 @@ The particles in the SM are divided into four categories: the twelve fermions wi
 % Proper introduction to EMJ models in general, and then in particular the models we're workign with (t-channel, s-channel)
 %
 
-Despite the astounding predictive power of the SM, the wealth of astronomical and cosmological evidence of the existence of dark matter points to this framework's incompleteness and the existence of physics beyond it. Experimental searches have excluded many dark matter models with weakly interacting massive particles. As a result, alternate models have emerged with a hidden guage sector with strong self-interactions in this hidden dark sector.
+% Despite the astounding predictive power of the SM, the wealth of astronomical and cosmological evidence of the existence of dark matter points to this framework's incompleteness and the existence of physics beyond it. Experimental searches have excluded many dark matter models with weakly interacting massive particles. As a result, alternate models have emerged with a hidden guage sector with strong self-interactions in this hidden dark sector.
 
 In this work, we consider a class of models first proposed in \cite{schwallerEmergingJets2015}, which extends the Standard Model by including a confining dark sector of particles which are charged under a new gauge group with a non-abelian guage symmetry, extending the SM to:
 
@@ -58,7 +62,7 @@ This dark sector is composed of $n_f$ dark quarks, $Q_d$, which are Dirac fermio
 
 We consider two possible scenarios for the mediator between the dark sector and the SM. Firstly, we consider a bi-fundamental scalar mediator $X_{\text{dark}}$, charged under $SU(N_d)$ and QCD. The decay of such a mediator would produce a quark, dark quark pair. The SM quarks would hadronize and produce a jet in the SM, and the dark quark would produce a dark jet. The dark jet would be composed of dark baryons, the lightest of which, the dark sector equivalent of the proton, would be stable and thus serve as the dark matter candidate put forward by this model, and dark mesons. The dark mesons, on the other hand, if kinematically allowed, would decay to the model's lightest composite state, i.e. the dark pion. This meson would itself be unstable and, assuming a large energy hierarchy between the mediator mass and the confinment scale of the dark sector, i.e. $m_{\pi_{\text{DK}}} \gg \Lambda_d$, could potentially travel macroscopic distances before decaying back into SM particles. Becasue the decay of these unstable dark mesons is a stochastic process, they would happen at different positions in the detector, and thus the energy of the dark jet would emerge into the detector. This would then be seen in the detector as a wide jet with displaced vertices. We call these types of objects emerging jets (EMJs). In this work, we focus on the pair production of this bi-fundamental mediator through gluon-gluon fusion or quark-antiquark annihilation. The Feynman diagrams for these processes can be seen in Figure \ref{fig:tchan}.
 
-Another type of model considered in this work is one where the mediator is a neutral vector boson $Z_{\text{dark}}$. This mediator couples to quark pairs and dark quark pairs.
+Another type of model considered in this work is one in which the mediator is a neutral vector boson $Z_{\text{dark}}$. This mediator couples to the quarks and dark quarks such, enabling the s-channel production of a pair of dark quarks through the annihilation of a pair of quarks, as shown in \ref{fig:s-chan}. This resonant production has a final state with a pair of EMJs produced by the hadronization of the dark quarks.
 
 
 
@@ -75,31 +79,35 @@ Another type of model considered in this work is one where the mediator is a neu
 % \section{Previous EMJ searches}
 
 
-It considered a pair of dark sector models, both with a bi-fundamental scalar mediator $X_{\text{dark}}$ connecting the dark sector to the SM, as shown in Figure \ref{fig:tchan_feyn}. The dark quarks hadronize in the dark sector, producing dark jets. Unstable dark mesons travel a macroscopic distance before decaying back into the SM. The first of these models had a simple flavor structure where the only the down quark is non-negiably to the dark quarks. This model results in a dark pion average decay length of:
+% It considered a pair of dark sector models, both with a bi-fundamental scalar mediator $X_{\text{dark}}$ connecting the dark sector to the SM, as shown in Figure \ref{fig:tchan_feyn}. The dark quarks hadronize in the dark sector, producing dark jets. Unstable dark mesons travel a macroscopic distance before decaying back into the SM. The first of these models had a simple flavor structure where the only the down quark is non-negiably to the dark quarks. This model results in a dark pion average decay length of:
 
 
 \begin{figure}[h] % TODO
 	\centering
 	\begin{subfigure}{0.45\textwidth}
-		\centering
-		\feynmandiagram [horizontal=a to b] {
-		i1 -- [gluon] a -- [gluon] i2,
-		a -- [gluon] b,
-
-
-		% i1 -- [fermion] a -- [fermion] i2,
-		% a -- [photon] b
-		% g1 [particle=\( g \)] -- [gluon] a,
-		% g2 [particle=\( g \)] -- [gluon] a,
-		% a -- [scalar]
-		% a -- [scalar, edge label=\(X_{\text{dark}}\)] b,
-		% a -- [scalar, edge label'=\(X_{\text{dark}}^\dagger\)] c,
-		% b -- [fermion] q1 [particle=\( Q_{\text{dark}} \)],
-		% b -- [anti fermion] q2 [particle=\( \bar{q} \)],
-		% c -- [fermion] q3 [particle=\( q' \)],
-		% c -- [fermion] q4 [particle=\( Q'_{\text{dark}} \)]
-		};
-		\caption{Gluon-gluon fusion}
+		\begin{fmffile}{feyn_s_channel}
+            \begin{fmfgraph*}(150,100)
+                % Incoming quarks
+                \fmfleft{i1,i2}
+                \fmfright{o1,o2}
+            
+                % Internal vertices
+                \fmf{fermion}{i1,v1}
+                \fmf{fermion}{v1,i2}
+            
+                \fmf{boson, label=$Z'$}{v1,v2}
+            
+                % Outgoing dark quarks
+                \fmf{fermion}{o1,v2}
+                \fmf{fermion}{v2,o2}
+            
+                % Label the external particles
+                \fmflabel{$q$}{i1}
+                \fmflabel{$\bar{q}$}{i2}
+                \fmflabel{$Q$}{o1}
+                \fmflabel{$\bar{Q}$}{o2}
+            \end{fmfgraph*}
+            \end{fmffile}
 	\end{subfigure}
 	\hfill
 	\begin{subfigure}{0.45\textwidth}
@@ -116,8 +124,43 @@ It considered a pair of dark sector models, both with a bi-fundamental scalar me
 		};
 		\caption{Quark-antiquark annihilation}
 	\end{subfigure}
-	\caption{Feynman diagrams for pair production of dark mediator particles via gluon-gluon fusion (left) and quark-antiquark annihilation (right), with each mediator decaying to an SM quark and a dark quark.}
-	\label{fig:feynman_diagrams}
+	\caption{Feynman diagrams for pair production of $X_{\text{dark}}$ mediators via gluon-gluon fusion (left) and quark-antiquark annihilation (right), with each mediator decaying to an SM quark and a dark quark.}
+	\label{fig:t-chan}
+\end{figure}
+
+\begin{equation}
+	\begin{aligned}
+		c\tau_{\pi_{\text{dark}}} = 80 \text{ mm} \left(\frac{1}{\kappa^4}\right) \left(\frac{2 \text{ GeV}}{f_{\pi_{\text{dark}}}}\right)^2 \left(\frac{100 \text{ MeV}}{m_d}\right)^2 \left(\frac{2 \text{ GeV}}{m_{\pi_{\text{dark}}}}\right)  \left(\frac{m_{X_{\text{dark}}}}{1 \text{ TeV}}\right)^2
+	\end{aligned}
+\end{equation}
+
+\begin{figure}[h]
+    \centering
+    \begin{fmffile}{feyn_s_channel}
+    \begin{fmfgraph*}(150,100)
+        % Incoming quarks
+        \fmfleft{i1,i2}
+        \fmfright{o1,o2}
+    
+        % Internal vertices
+        \fmf{fermion}{i1,v1}
+        \fmf{fermion}{v1,i2}
+    
+        \fmf{boson, label=$Z'$}{v1,v2}
+    
+        % Outgoing dark quarks
+        \fmf{fermion}{o1,v2}
+        \fmf{fermion}{v2,o2}
+    
+        % Label the external particles
+        \fmflabel{$q$}{i1}
+        \fmflabel{$\bar{q}$}{i2}
+        \fmflabel{$Q$}{o1}
+        \fmflabel{$\bar{Q}$}{o2}
+    \end{fmfgraph*}
+    \end{fmffile}
+    \caption{Feynman diagram for s-channel production of a pair of dark quarks through a $Z'$ mediator}
+    \label{fig:s-chan}
 \end{figure}
 
 \begin{equation}

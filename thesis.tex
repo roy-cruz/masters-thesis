@@ -1,6 +1,7 @@
 
 %____________________DOCUMENT PREAMBLE_________________________________
 \documentclass[12pt]{report}
+\usepackage{svg}
 \usepackage{appendix}
 \usepackage{graphicx}
 \usepackage{sidecap}
@@ -30,11 +31,13 @@
 \usepackage{colortbl}
 \usepackage{xcolor}
 \usepackage{multirow}
+\usepackage{multicol}
 \usepackage{tocloft}
 \usepackage{notoccite} % PREVENTS CITES IN CAPTIONS FROM MISNUMBERING YOUR REFERENCES https://tex.stackexchange.com/questions/302594/citation-inside-a-caption-dont-follow-order-of-appearance
 \pgfplotsset{compat=1.7}
 \usepackage{tikz}
 \usepackage{tikz-feynman}
+\usepackage{feynmf}
 \renewcommand{\bibname}{References} % or other title eg. Bibliography
 \bibliographystyle{ieeetr} %styles: abbrv, acm, alpha, apalike, ieeetr, plain, siam, unsrt.
 \usepackage[numbers,sort&compress]{natbib}
@@ -136,6 +139,7 @@
 \include{chapters/chapter4}
 \include{chapters/chapter5}
 \include{chapters/chapter6}
+\include{chapters/chapter7}
 \bibliography{references}
 \addcontentsline{toc}{chapter}{References}
 \newpage
@@ -154,10 +158,10 @@ A major challenge in the operation of the CMS detector is the process of ensurin
 \newpage
 
 % % _____________APPENDIX B______________________________________
-% \addcontentsline{exp}{chapter}{Appendix B: Reference Run Ranking} %Change title of Appendix B for List of Appendices
-% \chapter*{Appendix B: Reference Run Ranking} %Change title of Appendix B
-% %\example{DATA}
-% %\label{2nd_ex}
+\addcontentsline{exp}{chapter}{Appendix B: Reference Run Ranking} %Change title of Appendix B for List of Appendices
+\chapter*{Appendix B: Reference Run Ranking} %Change title of Appendix B
+% \example{DATA}
+% \label{2nd_ex}
 % \noindent \lipsum[1][1-3] %WRITE HERE
 
 \end{document}

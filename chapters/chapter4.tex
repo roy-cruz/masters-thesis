@@ -1,3 +1,26 @@
 \chapter{Event Generation}
 
-% Short chapter describing what is already in the lates search paper (modified to incorporate s-channel addition to SVJProd framework)
+The software framework used to produce the Monte Carlo (CM) samples utilized is the same one used in the latest published search for EMJs, \cite{cmscollaborationSearchNewPhysics2024}. This framework uses the Hidden Valley module \cite{carloniVisibleEffectsInvisible2010, carloniDiscerningSecludedSector2011} in Pythia version 8.240 \cite{sjostrandIntroductionPYTHIA822015}. The number of dark flavors in the dark sector is chosen to be $N_{\text{flavor}}^{\text{dark}} = 7$, due to the running of the dark coupling constant $\alpha_{\text{d}}$ at higher momentum transfer taking place faster for a higher amount of dark flavors, which increases parton multiplicity during showering. The dark sector is assumed to have the same number of dark color charges as QCD, that it $N_{\text{color}}^{\text{dark}} = 3$.
+
+The quark flavors in the dark sector are set with degenerate mass equal to the dark confinement scale $\Lambda_{\text{dark}}$, while the dark pion mass is set to be $\frac12 \Lambda_{\text{dark}}$ and the dark rho mass is set at $4\Lambda_{\text{dark}}$. In addition to this, for the bi-fundamental model, the width of the mediator was set to $10\;\text{GeV}$, while in the model with the $Z'$ mediator, the width is set to $10\;\text{MeV}$.
+
+All of the aforementioned assumptions leave just three free parameters: the proper decay length and mass of the dark pion, i.e. $m_{\pi_{\text{dark}}}$ and $c\tau_{\pi_{\text{dark}}}$ respectively, and the mass of the mediator $m_{\text{Med}}$. The parameter space simulated for both mediator models was the same, and is summarized in Table \ref{tab:param_vals}.
+
+\begin{table}[]
+    \centering
+    \begin{tabular}{|c|c|}
+        \hline
+        Model parameter & List of parameter values \\
+        \hline
+        $m_{\pi_{\text{dark}}}$ [GeV]   &   10, 20 \\
+        $m_{\text{Med}}$ [GeV]          & 100, 250, 500, 750, 1000, 1500, 2000 \\
+        $c\tau_{\pi_{\text{dark}}}$ [mm]& 1, 100, 1000, 1500, 2000\\
+        \hline
+    \end{tabular}
+    \caption{Model parameter values used for MC samples}
+    \label{tab:param_vals}
+\end{table}
+
+The showering and hadronization for the produced samples were simulated with the CP5 underlying event tune \ref{sirunyanExtractionValidationNew2020} in \textsc{Pythia8}, and the NNPDF3.1 next-to-NLO parton distribution functions \cite{ballPartonDistributionsHighprecision2017}. The detector response was modeled with \textsc{Geant4} \cite{agostinelliGeant4aSimulationToolkit2003}, with corrections applied for simulation-data discrepancies in resolution and efficiencies. 
+
+\section{Kinematic Characterization of Emerging Jet Monte Carlo Samples}
