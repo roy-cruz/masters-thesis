@@ -1,1 +1,17 @@
-\chapter{Anomaly Detection Trigger Performance in Monte Carlo Simulations}
+\chapter{Tracker Data Quality Monitoring}
+
+The current methods for data certification require a large amount of person-power. For instance, for Offline Tracker DQM, shifters undertake eight-hour shifts in which they look at hundreds of monitoring histograms which describe what happened during each run under evaluation. Two issues arise with this approach. Firstly, the increasing data volume and detector complexity, especially when the age of the High-Luminosity LHC (HL-LHC) arrives, means that shifters will have to look at more aspects of the detector in order to make decisions of the data quality, slowing down the data certification process and leading to higher mental strain, a possible source of human error. Moreover, the amount of monitoring histograms each shifter will have to look at in order to make a fair assessment will increase drastically, an issue which compounds the already existing problem of a lack of per-LS certification due to monitoring histograms being integrated over the entire run. The latter issue of low certification granularity may result in the certification of anomalous LSs as good, leading to the inclusion of problematic data downstream in the physics analyses performed by the collaboration.
+
+The aforementioned issues require a new approach. Thus, the CMS Collaboration has taken on the task of developing tools that aim to automate the detector monitoring and data certification process with higher granularity (i.e. per-LS) \cite{}. One of the main approaches towards tackling this problem has been through the integration of anomaly detection machine learning (ML) techniques in order to flag anomalous per-LS monitoring histograms, which a shifter can then manually evaluate. Unfortunately, until recently, there has been no accessible way for shifters to evaluate runs per LS. 
+
+To address the limited access to the per-LS information and to have a standard system to apply ML models for anomaly detection for DQM data, the Data Inspector for Anomaly Detection (DIALS) Web app was developed as a central tool for data visualization and ML training and inference \cite{}. 
+
+\section{Reference Run Ranking}
+
+A challenge that arises when integrating ML into the data certification workflow is the question of what data to train the model on. During regular human-driven certification, reference runs (i.e. good, long runs with a lot of statistics) are used to compare runs with similar data-taking conditions that are being certified. Because these runs are carefully scrutinized by experts and have many LSs, they can serve as good training datasets for the ML models that are being implemented in DQM. 
+
+\subsection{}
+
+\subsection{PCA for Automated Reference Run Selection}
+
+\section{DQM Explore}

@@ -1,4 +1,4 @@
-\chapter{Novel Trigger Efficiency Results}
+\chapter{Novel Trigger Efficiency }
 
 In \cite{cmscollaborationSearchNewPhysics2024}, the triggers used for data collection was the $H_T$ trigger with a threshold of $1050\;\text{GeV}$\footnote{For data from 2016, a trigger that required at least one jet with $p_\text{T} > 450\;\text{GeV}$ or $H_T > 900\;\text{GeV}$ was used due to an issue where jets were being dropped from the $H_T$ sum if they reached the energy saturation of the L1 trigger. Because the data simulated correspond to the data collection conditions in 2022, this alternative trigger was not considered.}. As a starting point, the efficiency of this previously used trigger was obtained for the EMJ simulated parameter space. The efficiency of trigger A is defined as
 
@@ -6,7 +6,7 @@ In \cite{cmscollaborationSearchNewPhysics2024}, the triggers used for data colle
     \varepsilon(A) = \frac{N_{\text{A}}}{N_\text{T}},
 \end{equation}
 
-\noindent where $N_{\text{A}}$ are the number of events that pass the selection of trigger A, while $N_\text{T}$ corresponds to the total number of events. Figure \ref{fig:ht1050} shows the raw trigger efficiency maps for the aforementioned trigger for the models with $X_{\text{dark}}$ and $Z'$ mediator for $m_{\pi_{\text{d}}} = 20 \;\text{GeV}$. In this work, to compute the efficiency and estimate its uncertainty, a bootstrap method was used with $1000$ trials and sample sizes of $1000$ events. The true efficiency value used was the mean of the results from this resampling method, and the upper and lower uncertainty estimates correspond to $1\sigma$ of the distribution of computed efficiencies.
+\noindent where $N_{\text{A}}$ are the number of events that pass the selection of trigger A, while $N_\text{T}$ corresponds to the total number of events. The uncertainty of these efficiencies was computed using the Clopper-Pearson interval. Figure \ref{fig:ht1050} shows the raw trigger efficiency maps for the aforementioned trigger for the models with $X_{\text{dark}}$ and $Z'$ mediators for $m_{\pi_{\text{d}}} = 20 \;\text{GeV}$.
 
 \begin{figure}[h]
     \centering
@@ -23,7 +23,7 @@ In \cite{cmscollaborationSearchNewPhysics2024}, the triggers used for data colle
     \label{fig:ht1050}
 \end{figure}
 
-It is readily visible that the performance of this trigger for shorter and longer dark pion lifetimes is comparable in the case of the $X_{\text{dark}}$ mediator. This is to be expected, as the final state has a high jet multiplicity, and, even for models with higher $c\tau$, two of the four jets are QCD jets, so the event can easily be triggered on. On the other hand, for the $Z'$ model, while the efficiency is high towards lower dark pion proper decay length and higher mediator mass, for the rest of the parameter space, the efficiency drops considerably. It is likely that this is part due a higher portion of the jet energy being deposited outside the calorimeters for higher lifetimes. Similar observations made with the \texttt{HLT\_PFHT1050} trigger can be made for its level-1 seed, the \texttt{L1\_HTT450er}, the efficiency heatmap for which can be seen in Figure \ref{fig:htt450er}.
+It is readily apparent that the performance of this trigger for shorter and longer dark pion lifetimes is comparable in the case of the $X_{\text{dark}}$ mediator. This is to be expected, as the final state has a high jet multiplicity and, even for models with higher $c\tau$, two of the four jets are QCD jets, so the event can easily be triggered on. On the other hand, for the $Z'$ model, while the efficiency is high towards a lower dark pion proper decay length and higher mediator mass, for the rest of the parameter space, the efficiency drops considerably. This is likely to be due in part to the fact that a higher portion of the jet energy is deposited outside the calorimeters for higher lifetimes. Similar observations made with the \texttt{HLT\_PFHT1050} trigger can be made for its L1 seed, the \texttt{L1\_HTT450er}, the efficiency heatmaps for which can be seen in Figure \ref{fig:htt450er}.
 
 \begin{figure}[h]
     \centering
@@ -34,32 +34,34 @@ It is readily visible that the performance of this trigger for shorter and longe
     \begin{subfigure}{0.45\textwidth}
         \includesvg[width=\linewidth]{images/L1/trigeffplots2D_L1_efftype-trig_mDark-20_s-channel_L1_HTT450er_effs.svg}
     \end{subfigure}
-    \caption{Trigger efficiency of L1\_HTT450er for the simulated parameter space}
+    \caption{Trigger efficiency of \texttt{L1\_HTT450er} for the simulated parameter space}
     \label{fig:ht1050}
 \end{figure}
 
-These results show the potential for improvement in the sensitivity for EMJs in a Run 3 search, particularly for the $Z'$ model. In order to understand what the set of LLP and AD triggers under study have to offer in terms of increasing sensitivity, the efficiency of the conventional triggers with the highest efficiency for each point in the simulated parameter space was used as a baseline. Conventional triggers in this context refer to the set of all triggers in the selected 2022 trigger menu that are not in the group of triggers under study or in a list of special-purpose triggers that are not relevant to these studies. Moreover, all triggers studied are unprescaled for the data-taking period the data is simulated for, and only those paths corresponding to nominal operations are included. For each trigger, the efficiency increase, or $\text{EI}$, defined as
+These results show the potential for an improvement in the sensitivity for EMJs in a Run 3 search, particularly for the $Z'$ model. In order to understand what the set of LLP and AD triggers under study have to offer in terms of increasing sensitivity, the efficiency of the conventional triggers with the highest efficiency for each point in the simulated parameter space was used as a baseline. Conventional triggers in this context refer to the set of all triggers in the selected 2022 trigger menu that are not in the group of triggers under study or in a list of special-purpose triggers that are not relevant to these studies. Moreover, all triggers studied are unprescaled for the data-taking period the data is simulated for, and only those paths corresponding to nominal operations are included. For each trigger, the efficiency increase, or $\text{EI}$, defined as
 
 \begin{equation}
-    \text{EI}_{\text{A}} (\text{A}, \text{B};\;\{m_{\text{Med}}, m_{\pi_{\text{d}}},c\tau_{\pi_{\text{d}}}\}) = \frac{\varepsilon_{\text{A OR B}}}{\varepsilon_{\text{B}}}
+    \text{EI}_{\text{A}B} (m_{\text{Med}}, m_{\pi_{\text{d}}},c\tau_{\pi_{\text{d}}}) = \frac{\varepsilon_{\text{A OR B}}}{\varepsilon_{\text{B}}},
 \end{equation}
 
-is used as a measure of increased sensitivity, where $\text{A}$ is the trigger under study, and $\text{B}$ is the best conventional trigger for the given set of parameter values.
+\noindent is used as a measure of increased sensitivity, where $\text{A}$ is the trigger under study, and $\text{B}$ is the best conventional trigger for the given set of parameter values.
 
-The choice of level-1 (Table \ref{tab:l1-trigs}) and high-level (Table \ref{tab:hlt-trigs}) triggers for this study is based on their novelty with respect to what was available for the previous search for EMJs, and with their functionality in mind. The anomaly detection triggers, allow for a model independent way of selecting anomalous events which exotic signatures. Moreover, previous studies such as \cite{} have shown that the use of this set of triggers for the search of beyond Standard Model physics can provide some increase in sensitivity. On the other hand, because the models which give rise to EMJs predict long-lived particles in the dark sector, potential was see for triggers targeting signatures left behind by long-lived particles. Previous studies have re-inforced this hypothesis \cite{} and thus motivate their inclusion in this study.
+The choice of L1 (Table \ref{tab:l1-trigs}) and HLT (Table \ref{tab:hlt-trigs}) triggers for this study is based on their novelty with respect to what was available for the previous search for EMJs, and with their functionality in mind. The anomaly detection triggers, allow for a model independent way of selecting anomalous events which exotic signatures. Moreover, previous studies such as \cite{} have shown that the use of this set of triggers for the search of beyond Standard Model physics can provide some increase in sensitivity. On the other hand, because the models which give rise to EMJs predict long-lived particles in the dark sector, potential was seen for triggers targeting signatures left behind by long-lived particles. Previous studies have reinforced this hypothesis \cite{} and thus motivate their inclusion in this study.
 
 \section{Level 1 Triggers Efficiencies}
 
-\subsection{Trigger Description}
+% \subsection{Trigger Description}
 
-In this section, a description of the set of level-1 triggers under study is provided.
+% In this section, a description of the set of level-1 triggers under study is provided.
 
-\noindent\textbf{Anomaly Detection Triggers:} 
+\subsection{Anomaly Detection Triggers}
+% \noindent\textbf{Anomaly Detection Triggers:} 
 
-As described in detail in \cite{}, hese triggers utilize unsupervised ML techniques to apply a model-independent selection of events with potentially interesting physics that would otherwise not be selected by cut-based triggers or triggers targeting particular detector signatures. Due to the resource constraints at the level-1 system and the challenges of fitting a complex ML model in an FPGA, however, various techniques such as quantized aware training and knowledge distillation must be implemented in order to deploy these triggers.
+As described in detail in \cite{}, these triggers utilize unsupervised ML techniques to apply a model-independent selection of events with potentially interesting physics that would otherwise not be selected by cut-based triggers or triggers targeting particular detector signatures. However, due to resource constraints in the L1 system and the challenges of fitting a complex ML model in an FPGA, various techniques such as quantized aware training and knowledge distillation must be implemented to deploy these triggers.
+
+The two AD triggers considered in these studies are AXOL1TL, based on a variational autoencoder, and CICADA, based on a convolutional autoencoder. They are trained on a large unbiased sample of data, most of which amounts to known QCD physics or where there was little momentum transfer, and output an anomaly score which serves as a metric of how different an output event is from the typical events the model was trained on. However, the input to AXOL1TL and CICADA differ: the former uses L1 objects, namely the $p_T$, $\phi$ and $\eta$ of 4 $e/\gamma$, 4 $\mu$ and 10 jets, as well as the $\phi$ and magnitude of the event's missing transverse energy, while the latter uses as input the calorimeter region energies. A threshold is applied to the anomaly score output, which dictates whether or not an event is selected, and which allows for the control of the rate of the trigger itself, as a higher threshold implies a less likelihood for any particular event to meet the selection criteria.
 
 
-The two AD triggers considered in these studies are AXOL1TL, based on a variational autoencoder, and CICADA, based on a convolutional autoencoder. They are trained on a a large unbiased sample of data, most of which amounts to known QCD physics or where there was little momentum transfer, and output an anomaly score which serves as a metric of how different an output event is from the typical events the model was trained on. However, the input to AXOL1TL and CICADA differ: the former uses level-1 objects, namely the $p_T$, $\phi$ and $\eta$ of 4 $e/\gamma$, 4 $\mu$ and 10 jets, as well as the $\phi$ and magnitude of the event's missing transverse energy, while the latter uses as input the calorimeter region energies. A threshold is applied to the anomaly score outputs, which dictates whether or not an event is selected, and which allows for the control of the rate of the trigger itself.
 
 % While triggers targeting particular expected signatures produced by physics beyond the Standard Model are effective, they become a limitation when there is no strong theoretical prior. It was under this consideration that AD triggers were developed, with the goal of increasing sensitivity to signals for which there are no dedicated signatures. These triggers utilize unsupervised ML techniques to search for new physics signatures. However, because the resources available at the level-1 trigger system are heavily restricted, as described in \ref{govorkovaAutoencodersFPGAsRealtime2022}, multiple techniques, such as knowledge distillation and quantum aware training (QAT), are implemented in order to allow these models to fit in FPGAs which can then be deployed.
 
