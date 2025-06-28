@@ -1,4 +1,5 @@
 \chapter{Event Generation}
+\label{chap:eventgen}
 
 The software framework used to produce the Monte Carlo (CM) samples utilized is the same one used in the latest published search for EMJs, \cite{cmscollaborationSearchNewPhysics2024}. This framework uses the Hidden Valley module \cite{carloniVisibleEffectsInvisible2010, carloniDiscerningSecludedSector2011} in Pythia version 8.240 \cite{sjostrandIntroductionPYTHIA822015}. The parameters available in this model are the mass of the mediator ($m_{\text{Med}}$), the width of the mediator particle ($\Gamma_{\text{Med}}$, the number of dark flavors ($N_{\text{flavor}}^\text{dark}$), the number of dark colors ($N_{\text{color}}^\text{dark}$), the Yukawa couplings between the dark quarks and quarks with the mediator, the dark confinement scale, the masses of the dark quark, the mass of the dark pion ($m_{\pi_{\text{dark}}}$), the dark pion proper decay length ($c\tau_{\pi_{\text{dark}}}$), and the mass of the dark rho meson ($m_{\rho_{\text{dark}}}$). In this work, we follow the simplifying model assumptions suggested in \cite{baiScaleDarkQCD2014} and \cite{schwallerEmergingJets2015}, which are the same as the previous searches for EMJ in CMS \cite{cmscollaborationSearchNewParticles2019, cmscollaborationSearchNewPhysics2024}. 
 
@@ -21,4 +22,4 @@ For a given type of mediator, all of the aforementioned assumptions leave just t
     \label{tab:param_vals}
 \end{table}
 
-Showering and hadronization for the samples produced were simulated with the CP5 underlying event tune \ref{sirunyanExtractionValidationNew2020} in \textsc{Pythia8}, and the NNPDF3.1 next-to-NLO parton distribution functions \cite{ballPartonDistributionsHighprecision2017}. The detector response was modeled with \textsc{Geant4} \cite{agostinelliGeant4aSimulationToolkit2003}, with corrections applied to simulation data discrepancies in resolution and efficiency.
+Showering and hadronization for the samples produced were simulated with the CP5 underlying event tune \cite{sirunyanExtractionValidationNew2020} in \textsc{Pythia8}, and the NNPDF3.1 next-to-NLO parton distribution functions \cite{ballPartonDistributionsHighprecision2017}. The detector response was modeled with \textsc{Geant4} \cite{agostinelliGeant4aSimulationToolkit2003}, with corrections applied to simulation data discrepancies in resolution and efficiency.
